@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="985.0" prefWidth="1607.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeController">
+   <children>
+      <ImageView fitHeight="986.0" fitWidth="1483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@paul-postema-mr0Dp231IEw-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane opacity="0.28" prefHeight="986.0" prefWidth="1724.0" style="-fx-background-color: black;">
+      </AnchorPane>
+      <HBox layoutX="-16.0" layoutY="106.0" prefHeight="258.0" prefWidth="1709.0">
+         <children>
+            <AnchorPane fx:id="anchorPane1" onMouseClicked="#reservation" onMouseEntered="#hoverEnter1" onMouseExited="#hoverExit1" opacity="0.82" prefHeight="261.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #FAC766#FAC766 #FAC766#FAC766; -fx-border-width: 4;">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="132.0" layoutX="57.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/012-room-key.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="185.0" text="Reservation">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="240.0" right="80.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane2" onMouseClicked="#availableRoom" onMouseEntered="#hoverEnter2" onMouseExited="#hoverExit2" opacity="0.82" prefHeight="261.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #FAC766#FAC766 #FAC766#FAC766; -fx-border-width: 4;">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="132.0" layoutX="57.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/001-interface-1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="45.0" layoutY="179.0" text="Available Room">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="80.0" right="80.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane3" onMouseEntered="#hoverEnter3" onMouseExited="#hoverExit3" opacity="0.82" prefHeight="261.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #FAC766#FAC766 #FAC766#FAC766; -fx-border-width: 4;">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="132.0" layoutX="57.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/005-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="50.0" layoutY="184.0" text="Customer Info">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="80.0" right="80.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="-6.0" layoutY="435.0" prefHeight="258.0" prefWidth="1709.0">
+         <children>
+            <AnchorPane fx:id="anchorPane4" onMouseClicked="#logOut" onMouseEntered="#hoverEnter4" onMouseExited="#hoverExit4" opacity="0.82" prefHeight="261.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #FAC766#FAC766; -fx-border-width: 4;">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="132.0" layoutX="52.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #FAC766;">
+                     <image>
+                        <Image url="@../img/001-arrows.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="76.0" layoutY="189.0" text="Log Out">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="420.0" right="80.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPane5" onMouseClicked="#exit" onMouseEntered="#hoverEnter5" onMouseExited="#hoverExit5" opacity="0.82" prefHeight="261.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: #FAC766#FAC766 #FAC766#FAC766; -fx-border-width: 4;">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="132.0" layoutX="57.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/003-exit-2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="186.0" text="Exit">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="80.0" right="80.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

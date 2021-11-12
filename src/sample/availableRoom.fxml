@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="943.0" prefWidth="1454.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.availableRoomController">
+   <children>
+      <ImageView fitHeight="978.0" fitWidth="1607.0" layoutX="-11.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hotel-4.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="64.0" layoutY="72.0" opacity="0.83" prefHeight="716.0" prefWidth="448.0" style="-fx-background-color: white#A0A3AA  #A0A3AA;">
+         <children>
+            <AnchorPane layoutX="55.0" layoutY="54.0" prefHeight="151.0" prefWidth="341.0" style="-fx-border-color: #A0A3AA  #A0A3AA; -fx-border-radius: 20px;">
+               <children>
+                  <Button fx:id="searchBtn1" layoutX="67.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchRoom" onMouseEntered="#searchEnter" onMouseExited="#searchExit" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #35CD96  #35CD96; -fx-border-radius: 20px;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="search_room_field" layoutX="35.0" layoutY="44.0" prefHeight="31.0" prefWidth="265.0" promptText="Search by room number :" style="-fx-border-color: white; -fx-background-color: white;">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="allBtn" layoutX="204.0" layoutY="101.0" mnemonicParsing="false" onAction="#allRoom" onMouseEntered="#availableEnter" onMouseExited="#availableExit" prefHeight="29.0" prefWidth="66.0" style="-fx-background-color: #35CD96  #35CD96; -fx-border-radius: 20px;" text="All" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="37.0" layoutY="76.0" prefHeight="4.0" prefWidth="264.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="57.0" layoutY="261.0" prefHeight="151.0" prefWidth="341.0" style="-fx-border-color: #A0A3AA  #A0A3AA; -fx-border-radius: 20px;">
+               <children>
+                  <RadioButton fx:id="busy_radio" layoutX="69.0" layoutY="59.0" mnemonicParsing="false" text="Busy">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="button" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="available_radio" layoutX="198.0" layoutY="59.0" mnemonicParsing="false" text="Available" toggleGroup="$button">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Button fx:id="searchBtn2" layoutX="129.0" layoutY="108.0" mnemonicParsing="false" onAction="#searchStatus" onMouseEntered="#search2Enter" onMouseExited="#search2Exit" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #35CD96  #35CD96; -fx-border-radius: 20px;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            <AnchorPane layoutX="60.0" layoutY="484.0" prefHeight="151.0" prefWidth="341.0" style="-fx-border-color: #A0A3AA  #A0A3AA; -fx-border-radius: 20px;">
+               <children>
+                  <Button fx:id="backBtn" layoutX="71.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#back" onMouseEntered="#backEnter" onMouseExited="#backExit" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #35CD96  #35CD96; -fx-border-radius: 20px;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="closeBtn" layoutX="193.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#close" onMouseEntered="#closeEnter" onMouseExited="#closeExit" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #35CD96  #35CD96; -fx-border-radius: 20px;" text="Close" textFill="WHITE">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="547.0" layoutY="70.0" opacity="0.83" prefHeight="714.0" prefWidth="782.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tableView" layoutX="-6.0" layoutY="-1.0" prefHeight="720.0" prefWidth="846.0">
+              <columns>
+                <TableColumn fx:id="room_number_column" prefWidth="137.39361572265625" text="Room No" />
+                <TableColumn fx:id="room_type_column" prefWidth="186.60638427734375" text="Type" />
+                  <TableColumn fx:id="number_of_people_column" prefWidth="192.08233642578125" text="Number Of People" />
+                  <TableColumn fx:id="room_price_column" prefWidth="140.1619873046875" text="Price" />
+                  <TableColumn fx:id="room_status_column" prefWidth="189.262451171875" text="Status" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
